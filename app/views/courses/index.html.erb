@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Units</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,6 +17,8 @@
       <tr>
         <td><%= course.title %></td>
         <td><%= course.description %></td>
+        <td><%= course.tag_list %></td>
+        <td><%= raw course.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
