@@ -7,6 +7,8 @@ development:
   adapter: postgresql
   database: paths_development
   host: localhost
+  username: rails
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,6 +17,8 @@ test:
   adapter: postgresql
   database: paths_test
   host: localhost
+  username: rails
+  password:
 
 production:
   adapter: sqlite3
