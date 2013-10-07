@@ -1,4 +1,6 @@
 Paths::Application.routes.draw do
+  resources :resources
+
   root :to => 'landing#index'
 
   resources :restypes
