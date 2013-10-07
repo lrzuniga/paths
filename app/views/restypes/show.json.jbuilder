@@ -1,1 +1,1 @@
-json.extract! @restype, :type, :description, :created_at, :updated_at
+json.extract! @restype, :restype, :description, :created_at, :updated_at

@@ -14,7 +14,7 @@
   <tbody>
     <% @restypes.each do |restype| %>
       <tr>
-        <td><%= restype.type %></td>
+        <td><%= restype.restype %></td>
         <td><%= restype.description %></td>
         <td><%= link_to 'Show', restype %></td>
         <td><%= link_to 'Edit', edit_restype_path(restype) %></td>
