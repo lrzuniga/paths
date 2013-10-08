@@ -12,8 +12,12 @@
 
 <p>
   <strong>Units:</strong>
-  <%= @course.tag_list %>
+  <%= @course.unit_list %>
 </p>
 
+<% @course.resources_tagged_with_units.each do |r| %>
+  <%= r.name %>
+  <% end  %>
+<br>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

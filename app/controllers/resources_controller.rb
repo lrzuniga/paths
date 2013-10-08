@@ -1,7 +1,6 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
-  # before_validation_on_create :upcase_unit
 
   # GET /resources
   # GET /resources.json
@@ -80,9 +79,7 @@ class ResourcesController < ApplicationController
       params.require(:resource).permit(:name, :provider, :link, :duration, :tag_list)
     end
 
-    # def upcase_unit
-    #   @resource.upcase!
-    # end
+  
 
 
 end
