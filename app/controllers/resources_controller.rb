@@ -1,6 +1,8 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
+  # before_validation_on_create :upcase_unit
+
   # GET /resources
   # GET /resources.json
   def index
@@ -65,6 +67,8 @@ class ResourcesController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_resource
@@ -75,4 +79,10 @@ class ResourcesController < ApplicationController
     def resource_params
       params.require(:resource).permit(:name, :provider, :link, :duration, :tag_list)
     end
+
+    # def upcase_unit
+    #   @resource.upcase!
+    # end
+
+
 end
