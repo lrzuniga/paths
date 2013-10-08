@@ -21,7 +21,7 @@
         <td><%= resource.provider %></td>
         <td><%= resource.link %></td>
         <td><%= resource.duration %></td>
-        <td><%= raw resource.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
+        <td><%= raw resource.unit_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
         <td><%= link_to 'Show', resource %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
         <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
