@@ -1,4 +1,4 @@
-<!--   <div class "container_resource">
+  <div class "container_resource">
     <h2> Add resource </h2>
 
     <%= form_for(@resource) do |f| %>
@@ -31,8 +31,8 @@
       <%= f.number_field :duration %>
     </div>
     <div class="field">
-      <%= f.label :unit_list, "Units (separated by commas)" %><br>
-      <%= f.text_field :unit_list %>
+      <%= f.label :unit_list, "Units Available" %><br>
+      <%= f.select :unit_list, options_for_select(@resource.unit_list), {}, {:multiple => true} %>
     </div>
     <div class="field">
       <%= f.label :level_list, "Levels" %><br>
@@ -50,4 +50,4 @@
       <%= f.submit %>
     </div>
   <% end %>
-</div> -->
+</div>

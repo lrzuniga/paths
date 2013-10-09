@@ -23,6 +23,7 @@ class ResourcesController < ApplicationController
 
   # GET /resources/1/edit
   def edit
+    # @resource = Resource.new(:unit_list => @course.unit_list)
   end
 
   # POST /resources
