@@ -29,6 +29,10 @@ class ResourcesController < ApplicationController
   # POST /resources.json
   def create
     @resource = Resource.new(resource_params)
+    @resource.unit_list = params[:resource][:unit_list].join(",")
+    @resource.level_list = params[:resource][:level_list].join(",")
+    @resource.resource_type_list = params[:resource][:resource_type_list].join(",")
+    # @resource.cost_list = params[:resource][:cost_list].join(",")
 
     respond_to do |format|
       if @resource.save

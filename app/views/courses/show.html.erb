@@ -72,15 +72,11 @@
       <%= f.label :duration %><br>
       <%= f.number_field :duration %>
     </div>
- <!--    <div class="field">
-      <%= f.label :unit_list, "Units (separated by commas)" %><br>
-      <%= f.text_field :unit_list %>
-    </div> -->
 
-    <%= f.label :unit_list, "Units Available" %><br>
+    <div class="field">
+      <%= f.label :unit_list, "Units Available" %><br>
       <%= f.select :unit_list, options_for_select(@course.unit_list), {}, {:multiple => true} %>
     </div>
-
     <div class="field">
       <%= f.label :level_list, "Levels" %><br>
       <%= f.select :level_list, options_for_select(["Intro", "Intermediate", "Advanced"]), {}, {:multiple => true} %>
