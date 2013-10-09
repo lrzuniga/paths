@@ -32,10 +32,12 @@
     <%= f.text_field :unit_list %>
   </div>
 
-  <div class="field">
-    <%= f.label :unit_list, "Units" %><br>
+      <div class="field">
+    <%= f.label :unit_list, "Units from Course" %><br>
     <%= f.select :unit_list, options_for_select(["One", "Two"]), {}, {:multiple => true} %>
+    <%#= f.select :unit_list, options_for_select(:unit_list), {}, {:multiple => true} %>
   </div>
+  
 
   <div class="field">
     <%= f.label :level_list, "Levels (separated by commas)" %><br>

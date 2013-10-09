@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @resource = Resource.new(:unit_list => @course.unit_list)
   end
 
   # GET /courses/new

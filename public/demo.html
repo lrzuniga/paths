@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Isotope Demo</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.js" type="text/javascript"></script> 
+</head>
+<body>
+ 
+ <div class="resourceFilter">
+ 
+    <a href="#" data-filter="*" class="current">All Categories</a>
+    <a href="#" data-filter=".html">HTML</a>
+    <a href="#" data-filter=".css">CSS</a>
+    <a href="#" data-filter=".ruby">Ruby</a>
+    <a href="#" data-filter=".rails">Rails</a>
+ 
+</div>
+
+<div class="courseContainer">
+ 
+    <div class="html">
+        <img src="images/headings.png" alt="image">
+    </div>
+
+    <div class="html">
+        <img src="images/links.png" alt="image">
+    </div>
+
+    <div class="html">
+        <img src="images/paragraphs.png" alt="image">
+    </div>
+
+    <div class="html">
+        <img src="images/tables.png" alt="image">
+    </div>
+
+    <div class="html">
+        <img src="images/divs.png" alt="image">
+    </div>
+
+    <div class="css">
+        <img src="images/syntax.png" alt="image">
+    </div>
+ 
+    <div class="css">
+        <img src="images/background.png" alt="image">
+    </div>    
+
+     <div class="css">
+        <img src="images/styling_text.png" alt="image">
+    </div>
+ 
+    <div class="css">
+        <img src="images/styling_fonts.png" alt="image">
+    </div>        
+
+    <div class="css">
+        <img src="images/box_model.png" alt="image">
+    </div>
+ 
+    <div class="css">
+        <img src="images/padding.png" alt="image">
+    </div>    
+
+    <div class="rails">
+        <img src="images/control_flow.png" alt="image">
+    </div>
+
+    <div class="rails">
+        <img src="images/loops_iterators.png" alt="image">
+    </div>
+    
+    <div class="rails">
+        <img src="images/arrays.png" alt="image">
+    </div>
+
+    <div class="rails">
+        <img src="images/hashes.png" alt="image">
+    </div>
+
+    <div class="ruby rails">
+        <img src="images/methods.png" alt="image">
+    </div>
+
+    <div class="rails">
+        <img src="images/classes.png" alt="image">
+    </div>
+     
+    <div class="ruby">
+        <img src="images/irb.png" alt="image">
+    </div>
+
+    <div class="ruby">
+        <img src="images/gems.png" alt="image">
+    </div>
+     
+    <div class="ruby">
+        <img src="images/javascript.png" alt="image">
+    </div>
+
+    <div class="ruby">
+        <img src="images/jquery.png" alt="image">
+    </div>
+
+    <div class="ruby">
+        <img src="images/heroku.png" alt="image">
+    </div>
+
+    <div class="ruby">
+        <img src="images/github.png" alt="image">
+    </div>
+ 
+</div>
+
+
+
+<script type="text/javascript">
+ 
+$(window).load(function(){
+    var $container = $('.courseContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.resourceFilter a').click(function(){
+        $('.resourceFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+
+ 
+</script>
+</body>
+</html> 
