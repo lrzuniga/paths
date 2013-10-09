@@ -17,6 +17,9 @@
 
 <% @course.resources_tagged_with_units.each do |r| %>
   <%= r.name %>
+  <%= r.provider %>
+  <%= r.link %>
+  <br>
   <% end  %>
 <br>
 <%= link_to 'Edit', edit_course_path(@course) %> |
