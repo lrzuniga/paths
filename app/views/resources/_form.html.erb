@@ -1,56 +1,53 @@
-<%= form_for(@resource) do |f| %>
-  <% if @resource.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this resource from being saved:</h2>
+  <div class "container_resource">
+    <h2> Add resource </h2>
 
-      <ul>
-      <% @resource.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <%= form_for(@resource) do |f| %>
+      <% if @resource.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this resource from being saved:</h2>
+
+          <ul>
+          <% @resource.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :provider %><br>
+      <%= f.text_area :provider %>
+    </div>
+    <div class="field">
+      <%= f.label :link %><br>
+      <%= f.text_area :link %>
+    </div>
+    <div class="field">
+      <%= f.label :duration %><br>
+      <%= f.number_field :duration %>
+    </div>
+    <div class="field">
+      <%= f.label :unit_list, "Units (separated by commas)" %><br>
+      <%= f.text_field :unit_list %>
+    </div>
+    <div class="field">
+      <%= f.label :level_list, "Levels" %><br>
+      <%= f.select :level_list, options_for_select(["Intro", "Intermediate", "Advanced"]), {}, {:multiple => true} %>
+    </div>
+    <div class="field">
+      <%= f.label :resource_type_list, "Resource Type (separated by commas)" %><br>
+      <%= f.select :resource_type_list, options_for_select(["Tutorial", "Video", "Document", "Miscelaneous"]), {}, {:multiple => true} %>
+    </div>
+      <div class="field">
+      <%= f.label :cost_list, "Free or Paid" %><br>
+       <%= f.select :cost_list, options_for_select(["Free", "Paid"]), {}, {:multiple => false} %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :provider %><br>
-    <%= f.text_area :provider %>
-  </div>
-  <div class="field">
-    <%= f.label :link %><br>
-    <%= f.text_area :link %>
-  </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
-  </div>
-  <div class="field">
-    <%= f.label :unit_list, "Units (separated by commas)" %><br>
-    <%= f.text_field :unit_list %>
-  </div>
-
-  <div class="field">
-    <%= f.label :unit_list, "Units from Course" %><br>
-    <%= f.select :unit_list, options_for_select(["One", "Two"]), {}, {:multiple => true} %>
-    <%#= f.select :unit_list, options_for_select(:unit_list), {}, {:multiple => true} %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :level_list, "Levels (separated by commas)" %><br>
-    <%= f.text_field :level_list %>
-  </div>
-  <div class="field">
-    <%= f.label :resource_type_list, "Resource Type (separated by commas)" %><br>
-    <%= f.text_field :resource_type_list %>
-  </div>
-    <div class="field">
-    <%= f.label :cost_list, "Free or Paid" %><br>
-    <%= f.text_field :cost_list %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
