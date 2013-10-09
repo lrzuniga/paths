@@ -22,7 +22,16 @@
 
 <p>
   <strong>Unit:</strong>
-  <%= @resource.tag_list%>
+  <%= @resource.unit_list%>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @resource.level_list%>
+</p>
+<p>
+  <strong>Resource Type:</strong>
+  <%= @resource.resource_type_list%>
 </p>
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |

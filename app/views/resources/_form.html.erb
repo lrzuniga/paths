@@ -28,8 +28,16 @@
     <%= f.number_field :duration %>
   </div>
   <div class="field">
-    <%= f.label :unit_list, "Tags (separated by commas)" %><br>
+    <%= f.label :unit_list, "Units (separated by commas)" %><br>
     <%= f.text_field :unit_list %>
+  </div>
+  <div class="field">
+    <%= f.label :level_list, "Levels (separated by commas)" %><br>
+    <%= f.text_field :level_list %>
+  </div>
+  <div class="field">
+    <%= f.label :resource_type_list, "Resource Type (separated by commas)" %><br>
+    <%= f.text_field :resource_type_list %>
   </div>
   <div class="actions">
     <%= f.submit %>
