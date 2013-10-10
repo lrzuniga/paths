@@ -12,14 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 // (function() {
 //   $('.input-row #top_list, .input-row #post_tags_list').select2({tags:[]})
 // });
 
-$(window).load(function(){
+$(document).ready(function(){
     var $container = $('.resourcesContainer');
     $container.isotope({
         filter: '*',
