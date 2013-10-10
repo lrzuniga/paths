@@ -30,7 +30,7 @@
       <%= f.label :duration %><br>
       <%= f.number_field :duration %>
     </div>
-    <div class="input-row">
+    <div id="input-row">
       <%= f.label :unit_list, "Units Available" %><br>
       <%= f.text_field :unit_list %>
     </div>
@@ -51,11 +51,11 @@
     </div>
   <% end %>
 
-  <script type="text/javascript">
-    $(function() {
-      $('.input-row #unit_list').select2({tags:[]})
+  <script>
+    $(document).ready(function() {
+      var my_tags = @resource.unit_list
+      $("#input-row").select2({tags:["Red","Blue","Green"] });
     });
-
   </script>
 
 </div>

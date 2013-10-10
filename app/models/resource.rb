@@ -3,7 +3,7 @@ class Resource < ActiveRecord::Base
   # has_many :courses_resources
   # has_many :courses, :through => :courses_resources
   
-  #acts_as_taggable
+  acts_as_taggable
   acts_as_taggable_on :units, :levels, :resource_types, :costs
 
   def upcase_unit_list
