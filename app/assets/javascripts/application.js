@@ -19,3 +19,31 @@
 //   $('.input-row #top_list, .input-row #post_tags_list').select2({tags:[]})
 // });
 
+$(window).load(function(){
+    var $container = $('.resourcesContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.resourceFilter a').click(function(){
+        $('.resourceFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+
