@@ -10,10 +10,10 @@
   <%= @course.description %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Units:</strong>
   <%= @course.unit_list %>
-</p>
+</p> -->
 
 <!-- <div class="resourceFilter">
     <a href="#" data-filter="*" class="current">All Categories</a>
@@ -30,14 +30,22 @@
       <p class="cost">10.811</p>
     </div> -->
 
+  <div class="resourceFilter">
+    <a href="#" data-filter="*" class="current">All Units</a>
+    <% @course.unit_list.each do |u| %>
+      <a href="#" data-filter=".<%= u %>"><%= u %></a>
+    <% end %> 
+  </div>
+
+  <div class="resourcesContainer">
   <% @course.resources_tagged_with_units.each do |r| %>
-    <%= r.name %>
-    <%= r.unit_list %>
-    <%= r.level_list %>
-    <%= r.resource_type_list %>
-    <%= r.cost_list %>
-    <br>
+    <% categories = r.unit_list.join(" ") %> 
+    <div class="<%= categories %> resource">
+      <%= r.name %>
+
+    </div>
   <% end  %>
+  </div>
 
 <br>
   <div class "container_resource">
@@ -97,3 +105,88 @@
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+
+<style>
+
+body {
+    font-family: Arial;
+}
+ 
+.resourceFilter a { 
+    margin-right: 10px; 
+    color:#666;
+    text-decoration:none;
+}
+ 
+.resourceFilter a.current { 
+    font-weight:bold;
+}
+ 
+img {
+    margin:5px;
+}
+ 
+.isotope-item {
+    margin: 2px;
+    background-color: yellow;
+    padding: 20px;
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+ 
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+</style>
+
+
+<script type="text/javascript">
+ 
+$(window).load(function(){
+    var $container = $('.resourcesContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.resourceFilter a').click(function(){
+        $('.resourceFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+
+ 
+</script>
