@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.isotope
 //= require_tree .
 
 // (function() {
@@ -21,6 +22,7 @@
 $(document).ready(function(){
     var $container = $('.resourcesContainer');
     $container.isotope({
+        layoutMode: 'fitRows',
         filter: '*',
         animationOptions: {
             duration: 750,
