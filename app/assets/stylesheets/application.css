@@ -46,15 +46,6 @@ body
 {
 	font-family: Arial;
 }
-#new_course.new_course DIV
-{
-	text-align: center;
-}
-#new-course-label{
-	font-size: 40
-	/px;
-}
-
 INPUT#course_title
 {
 	border:4px solid #456879;
@@ -107,6 +98,9 @@ IMG
 	-moz-transition-property: -moz-transform, opacity;
 	transition-property: transform, opacity;
 }
+.new-course-field{
+	text-align: center;
+}
 #new-course-form{
 width: 400px;
 height: 28px;
@@ -118,8 +112,22 @@ font-family: 'Heveltica', sans-serif;
 font-weight: 100;
 font-size: 24px;
 color: #000;
-background: url('http://cdn.skilledup.com/images/cms/search-icon.png') no-repeat 15px #fff;
+background: url('search-icon.png') no-repeat 15px #fff;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
+}
+.new-unit-field{
+	text-align: center;
+	position: relative;
+	top:20px;
+}
+#new-unit-label{
+	color:white;
+}
+.go {
+	cursor: pointer;
+	position: absolute;
+	width: 79px;
+	border: 0;
 }
