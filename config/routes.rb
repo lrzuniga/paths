@@ -3,7 +3,7 @@ Paths::Application.routes.draw do
   get 'tags/:tag', to: 'resources#index', as: :tag
   resources :resources
 
-  root :to => 'landing#index'
+  root :to => 'courses#new'
 
   resources :restypes
 

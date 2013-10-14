@@ -11,7 +11,8 @@
 
 
  */
-#site_title {
+#site_title
+{
 	text-align: center;
 	background: #95C3EF;
 	padding-top: 20px;
@@ -21,8 +22,8 @@
 	line-height: 2;
 	color: #FCFCFD;
 }
-
-.nav {
+.nav
+{
 	border: 1px solid #CCC;
 	border-width: 1px 0;
 	list-style: none;
@@ -30,61 +31,71 @@
 	padding: 0;
 	text-align: center;
 }
-
-.nav li {
+.nav LI
+{
 	display: inline;
 }
-
-.nav a {
+.nav A
+{
 	display: inline-block;
 	padding: 10px;
 	text-decoration: none;
 }
-
-body {
+BODY
+{
 	font-family: Arial;
 }
-
-.resourceFilter a {
+#new_course.new_course DIV
+{
+	text-align: center;
+}
+INPUT#course_title
+{
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+}
+.resourceFilter A
+{
 	margin-right: 10px;
 	color: #666;
 	text-decoration: none;
 }
-
-.resourceFilter a.current {
+.resourceFilter A.current
+{
 	font-weight: bold;
 }
-
-img {
+IMG
+{
 	margin: 5px;
 }
-
-.isotope-item {
+.isotope-item
+{
 	margin: 2px;
 	background-color: #FFFF00;
-
 	z-index: 2;
 }
-
-.isotope-hidden.isotope-item{
+.isotope-hidden.isotope-item
+{
 	pointer-events: none;
 	z-index: 1;
 }
-
-.isotope, .isotope .isotope-item {
+.isotope, .isotope .isotope-item
+{
 	/*change duration value to whatever you like*/
 	-webkit-transition-duration: 0.8s;
 	-moz-transition-duration: 0.8s;
 	transition-duration: 0.8s;
 }
-
-.isotope {
+.isotope
+{
 	-webkit-transition-property: height, width;
 	-moz-transition-property: height, width;
 	transition-property: height, width;
 }
-
-.isotope .isotope-item {
+.isotope .isotope-item
+{
 	-webkit-transition-property: -webkit-transform, opacity;
 	-moz-transition-property: -moz-transform, opacity;
 	transition-property: transform, opacity;
