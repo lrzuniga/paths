@@ -1,16 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
+<p id="course-title">
+  <%= @course.title%>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
-
-<!--  <div class="element metalloid   " data-symbol="B" data-category="metalloid">
+<!--<div class="element metalloid   " data-symbol="B" data-category="metalloid">
       <p class="leve">5</p>
       <h3 class="resource_type">B</h3>
       <h2 class="name">Boron</h2>
@@ -29,13 +23,12 @@
     <% categories = r.unit_list.join(" ") %> 
     <div class="<%= categories %> resource">
       <%= r.name %>
-
     </div>
   <% end  %>
   </div>
 
 <br>
-  <div class "container_resource">
+  <div class="resource-form">
     <h2> Add resource </h2>
 
     <%= form_for(@resource) do |f| %>
@@ -50,6 +43,7 @@
           </ul>
         </div>
     <% end %>
+
 
     <div class="field">
       <%= f.label :name %><br>
@@ -87,6 +81,7 @@
     <div class="actions">
       <%= f.submit %>
     </div>
+  </div>  
   <% end %>
 </div>
 

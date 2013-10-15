@@ -57,7 +57,7 @@ INPUT#course_title
 .resourceFilter A
 {
 	margin-right: 10px;
-	color: #666;
+	color: white;
 	text-decoration: none;
 }
 .resourceFilter A.current
@@ -118,7 +118,7 @@ IMG
 }
 .new-unit-field{
 	text-align: center;
-	visibility: hidden;
+	display: none;
 }
 #new-unit-form{
 	width: 150px;
@@ -159,4 +159,17 @@ IMG
 }
 .next-step {
 	color:white;
+}
+.resource-form {
+	text-align: center;
+	color: white;
+}
+#course-title{
+	color:white;
+	text-align: right;
+	font-size: 50px;
+	text-shadow: -2px 5px 10px rgba(0, 0, 0, 1);
+}
+.resourceFilter {
+	text-align: center;
 }

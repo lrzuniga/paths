@@ -47,12 +47,8 @@ $(document).ready(function(){
          return false;
     }); 
 
-
-    $('.next-step').click(function(){
-        console.log("bing");
-        $('.unit-container').fadeToggle();
-        $('.new-unit-field').fadeToggle();
-        $('.new-unit-form').fadeToggle();
+    $('#new-course-form').on("focus", function(){
+        $('.new-unit-field').fadeIn(1000);
     });
 
 
