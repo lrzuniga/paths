@@ -10,16 +10,23 @@
       </ul>
     </div>
   <% end %>
-
+  <br>
+  <br>
+<div class="course-container"
   <div class="new-course-field">
     <% f.label "Create a New Course", :id => "new-course-label"%>
     <%= f.text_field :title, :id => "new-course-form", :placeholder => "Start by Creating a New Course"%>
+      <br><a href="#" class="next-step">Add Unit</a>
+<!--     <%= f.submit "Create", :id => "btn-submit-course"%> -->
   </div>
+</div>
+  <br>
+<!-- <div class="unit-container"> -->
+
   <div class="new-unit-field">
-    <%= f.label :unit_list, "Add Course Units", :id => "new-unit-label"%>
-    <%= f.text_field :unit_list %>
+    <%= f.text_field :unit_list, :id => "new-unit-form", :placeholder => "Add Units"%>
+    <%= f.submit "Create", :id => "btn-submit-unit"%>
   </div>
-<div class="actions">
-    <%= f.submit "Create", :class => "go"%>
-  </div>
+<!-- </div> -->
+
 <% end %>

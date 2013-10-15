@@ -46,5 +46,15 @@ $(document).ready(function(){
          });
          return false;
     }); 
-});
 
+
+    $('.next-step').click(function(){
+        console.log("bing");
+        $('.unit-container').fadeToggle();
+        $('.new-unit-field').fadeToggle();
+        $('.new-unit-form').fadeToggle();
+    });
+
+
+
+});
