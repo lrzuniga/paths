@@ -11,33 +11,48 @@
       <p class="cost">10.811</p>
     </div> -->
 
-  <section id="options">
-    <div class="resourceFilter">
-      <ul class="filter option-set" data-filter-group="unit">
-        <li><a href="#" data-filter="*" class="current">All Units</a></li>
+  
+  <section id="options" class="clearfix combo-filters">
+  <h3>Filters</h3>
+
+    <div class="option-combo unit">
+      <!-- <h4>Unit</h4> -->
+      <ul class="filter option-set clearfix" data-filter-group="unit">
+        <li><a href="#" data-filter-value="" class="selected">All Units</a></li>
         <% @course.unit_list.each do |u| %>
-          <li><a href="#" data-filter=".<%= u %>"><%= u.upcase %></a></li>
+          <li><a href="#" data-filter-value=".<%= u %>"><%= u.upcase %></a></li>
         <% end %> 
       </ul>
     </div>
-  </section>
 
-  <section id="options2">
-    <div class="resourceFilter">
-      <ul class="filter option-set" data-filter-group="level">
-        <li><a href="#" data-filter="*" class="current">All Levels</a></li>
+    <div class="option-combo level">
+      <!-- <h4>level</h4> -->
+      <ul class="filter option-set clearfix" data-filter-group="level">
+        <li><a href="#" data-filter-value="" class="selected">All Levels</a></li>
         <% Resource::LEVELS.each do |l| %>
-          <li><a href="#" data-filter=".<%= l %>"><%= l.upcase %></a></li>
+          <li><a href="#" data-filter-value=".<%= l %>"><%= l.upcase %></a></li>
         <% end %> 
       </ul>
     </div>
+
+    <div class="option-combo rtype">
+<!--       <h4>resourceType</h4> -->
+      <ul class="filter option-set clearfix" data-filter-group="rtype">
+        <li><a href="#" data-filter-value="" class="selected">All Resource Types</a></li>
+        <% Resource::RESOURCE_TYPES.each do |rt| %>
+          <li><a href="#" data-filter-value=".<%= rt %>"><%= rt.upcase %></a></li>
+        <% end %> 
+      </ul>
+    </div>
+
   </section>
 
-    <div class="resourcesContainer">
+    <div id="container" class="clearfix">
     <% @course.resources_tagged_with_units.each do |r| %>
       <% categories = r.unit_list.join(" ") %> 
       <% levels = r.level_list.join(" ") %> 
-      <div class="<%= categories %> <%= levels %> resource">
+      <% rtypes = r.resource_type_list.join(" ") %>
+      <div class="unit-level <%= categories %> <%= levels %> <%= rtypes %>">
         <%= link_to r.name, r.link, :target => '_blank' %>
       </div>
     <% end  %>

@@ -18,39 +18,82 @@
 // (function() {
 //   $('.input-row #top_list, .input-row #post_tags_list').select2({tags:[]})
 // });
+    $(document).ready(function(){
+    var $container = $('#container'),
+        filters = {};
 
-$(document).ready(function(){
-    var $container = $('.resourcesContainer');
     $container.isotope({
-        layoutMode: 'fitRows',
-        filter: '*',
-        animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-        }
-    });
- 
-    $('.resourceFilter a').click(function(){
-        $('.resourceFilter .current').removeClass('current');
-        $(this).addClass('current');
- 
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-         });
-         return false;
-    }); 
-
-    $('#new-course-form').on("focus", function(){
-        $('.new-unit-field').fadeIn(1000);
+      itemSelector: '.unit-level',
+      layoutMode: "fitRows"
+      // masonry: {
+      //   columnWidth: 80
+      // }
     });
 
+    // filter buttons
+    $('.filter a').click(function(){
+      var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+        return;
+      }
+      
+      var $optionSet = $this.parents('.option-set');
+      // change selected class
+      $optionSet.find('.selected').removeClass('selected');
+      $this.addClass('selected');
+      
+      // store filter value in object
+      // i.e. filters.color = 'red'
+      var group = $optionSet.attr('data-filter-group');
+      filters[ group ] = $this.attr('data-filter-value');
+      // convert object into array
+      var isoFilters = [];
+      for ( var prop in filters ) {
+        isoFilters.push( filters[ prop ] )
+      }
+      var selector = isoFilters.join('');
+      $container.isotope({ filter: selector });
+
+      return false;
+    });
+
+  });
+
+// $(document).ready(function(){
+//     var $container = $('.resourcesContainer');
+//     $container.isotope({
+//         layoutMode: 'fitRows',
+//         filter: '*',
+//         animationOptions: {
+//             duration: 750,
+//             easing: 'linear',
+//             queue: false
+//         }
+//     });
+ 
+//     $('.resourceFilter a').click(function(){
+//         $('.resourceFilter .current').removeClass('current');
+//         $(this).addClass('current');
+ 
+//         var selector = $(this).attr('data-filter');
+//         $container.isotope({
+//             filter: selector,
+//             animationOptions: {
+//                 duration: 750,
+//                 easing: 'linear',
+//                 queue: false
+//             }
+//          });
+//          return false;
+//     }); 
+
+//     $('#new-course-form').on("focus", function(){
+//         $('.new-unit-field').fadeIn(1000);
+//     });
 
 
-});
+
+// });
+
+
