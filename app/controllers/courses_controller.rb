@@ -61,7 +61,7 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
@@ -72,4 +72,9 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:title, :description, :unit_list)
     end
+
+    def url_with_protocol(url)
+      /^http/.match(url) ? url : "http://#{url}"
+    end
+
 end

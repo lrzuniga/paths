@@ -36,7 +36,7 @@
     </div>
     <div class="field">
       <%= f.label :level_list, "Levels" %><br>
-      <%= f.select :level_list, options_for_select(["Intro", "Intermediate", "Advanced"]), {}, {:multiple => true} %>
+      <%= f.select :level_list, options_for_select(Resource::LEVELS), {}, {:multiple => true} %>
     </div>
     <div class="field">
       <%= f.label :resource_type_list, "Resource Type (separated by commas)" %><br>

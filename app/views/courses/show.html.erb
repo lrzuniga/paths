@@ -11,22 +11,38 @@
       <p class="cost">10.811</p>
     </div> -->
 
-  <div class="resourceFilter">
-    <a href="#" data-filter="*" class="current">All Units</a>
-    <% @course.unit_list.each do |u| %>
-      <a href="#" data-filter=".<%= u %>"><%= u %></a>
-    <% end %> 
-  </div>
-
-  <div class="resourcesContainer">
-  <% @course.resources_tagged_with_units.each do |r| %>
-    <% categories = r.unit_list.join(" ") %> 
-    <div class="<%= categories %> resource">
-      <%= r.name %>
+  <section id="options">
+    <div class="resourceFilter">
+      <ul class="filter option-set" data-filter-group="unit">
+        <li><a href="#" data-filter="*" class="current">All Units</a></li>
+        <% @course.unit_list.each do |u| %>
+          <li><a href="#" data-filter=".<%= u %>"><%= u.upcase %></a></li>
+        <% end %> 
+      </ul>
     </div>
-  <% end  %>
-  </div>
+  </section>
 
+  <section id="options2">
+    <div class="resourceFilter">
+      <ul class="filter option-set" data-filter-group="level">
+        <li><a href="#" data-filter="*" class="current">All Levels</a></li>
+        <% Resource::LEVELS.each do |l| %>
+          <li><a href="#" data-filter=".<%= l %>"><%= l.upcase %></a></li>
+        <% end %> 
+      </ul>
+    </div>
+  </section>
+
+    <div class="resourcesContainer">
+    <% @course.resources_tagged_with_units.each do |r| %>
+      <% categories = r.unit_list.join(" ") %> 
+      <% levels = r.level_list.join(" ") %> 
+      <div class="<%= categories %> <%= levels %> resource">
+        <%= link_to r.name, r.link, :target => '_blank' %>
+      </div>
+    <% end  %>
+    </div>
+</div>
 <br>
   <div class="resource-form">
     <h2> Add resource </h2>
