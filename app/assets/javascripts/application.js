@@ -62,6 +62,9 @@
         $('.new-unit-field').fadeIn(1000);
     });
 
+    $('#new-resource-btn').on("click", function(){
+        $('.resource-form').fadeIn(1000)
+    })
 
   });
 

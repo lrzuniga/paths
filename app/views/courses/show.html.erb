@@ -36,6 +36,10 @@
       </ul>
     </div>
 
+  <div id="new-resource-btn">
+    <button>Add Resource</button>
+  </div>
+  
   </section>
 
     <div id="container" class="clearfix">
@@ -49,10 +53,10 @@
     <% end  %>
     </div>
 </div>
-<br>
-  <div class="resource-form">
-    <h2> Add resource </h2>
 
+
+
+  <div class="resource-form">
     <%= form_for(@resource) do |f| %>
       <% if @resource.errors.any? %>
         <div id="error_explanation">
