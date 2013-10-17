@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resource.name %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @resource.provider %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @resource.link %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @resource.duration %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @resource.unit_list%>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @resource.level_list%>
+</p>
+<p>
+  <strong>Resource Type:</strong>
+  <%= @resource.resource_type_list%>
+</p>
+<p>
+  <strong>Cost:</strong>
+  <%= @resource.cost_list%>
+</p>
+
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

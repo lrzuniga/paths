@@ -24,7 +24,7 @@
 
     $container.isotope({
       itemSelector: '.unit-level',
-      layoutMode: "fitRows"
+      // layoutMode: "fitRows"
       // masonry: {
       //   columnWidth: 80
       // }
@@ -63,7 +63,8 @@
     });
 
     $('#new-resource-btn').on("click", function(){
-        $('.resource-form').fadeIn(1000)
+        $('#resource-form-container').fadeIn(1000);
+        $("#resource-show-container").fadeOut(1000);
     })
 
   });
