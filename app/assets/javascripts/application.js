@@ -20,14 +20,17 @@
 // });
     $(document).ready(function(){
     var $container = $('#container'),
+
         filters = {};
 
     $container.isotope({
       itemSelector: '.unit-level',
-      // layoutMode: "fitRows"
-      // masonry: {
-      //   columnWidth: 80
-      // }
+      // layoutMode: "fitRows",
+      resizable: false
+      masonry: {
+        columnWidth: 80
+        
+      }
     });
 
     // filter buttons
