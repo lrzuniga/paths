@@ -1,22 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p id="course-title">
+
   <%= @course.title%>
 </p>
-
-<!--<div class="element metalloid   " data-symbol="B" data-category="metalloid">
-      <p class="leve">5</p>
-      <h3 class="resource_type">B</h3>
-      <h2 class="name">Boron</h2>
-      <p class="cost">10.811</p>
-    </div> -->
-
-  
   <section id="options" class="clearfix combo-filters">
-  <h3>Filters</h3>
 
     <div class="option-combo unit">
-      <!-- <h4>Unit</h4> -->
+      <h4>Unit</h4>
       <ul class="filter option-set clearfix" data-filter-group="unit">
         <li><a href="#" data-filter-value="" class="selected">All Units</a></li>
         <% @course.unit_list.each do |u| %>
@@ -26,7 +17,7 @@
     </div>
 
     <div class="option-combo level">
-      <!-- <h4>level</h4> -->
+      <h4>Level</h4>
       <ul class="filter option-set clearfix" data-filter-group="level">
         <li><a href="#" data-filter-value="" class="selected">All Levels</a></li>
         <% Resource::LEVELS.each do |l| %>
@@ -36,7 +27,7 @@
     </div>
 
     <div class="option-combo rtype">
-<!--       <h4>resourceType</h4> -->
+      <h4>Resource Type</h4>
       <ul class="filter option-set clearfix" data-filter-group="rtype">
         <li><a href="#" data-filter-value="" class="selected">All Resource Types</a></li>
         <% Resource::RESOURCE_TYPES.each do |rt| %>

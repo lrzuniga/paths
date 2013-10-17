@@ -58,6 +58,11 @@
       return false;
     });
 
+    $('#new-course-form').on("focus", function(){
+        $('.new-unit-field').fadeIn(1000);
+    });
+
+
   });
 
 // $(document).ready(function(){
@@ -88,9 +93,7 @@
 //          return false;
 //     }); 
 
-//     $('#new-course-form').on("focus", function(){
-//         $('.new-unit-field').fadeIn(1000);
-//     });
+
 
 
 
