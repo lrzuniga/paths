@@ -28,8 +28,7 @@
       // layoutMode: "fitRows",
       // resizable: false
       masonry: {
-        columnWidth: 80
-        
+        columnWidth: 4
       }
     });
 
