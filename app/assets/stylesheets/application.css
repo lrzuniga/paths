@@ -315,7 +315,7 @@ ul, ol {
 
 a,
 a code {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -555,11 +555,14 @@ body {
 
 .unit-level {
   /*width: 50px;*/
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
   height: 25px;
   margin: 5px;
   padding: 10px;
   float: left;
-  background-color: yellow;
+  background-color: #545454;
   color: black;
 }
  
@@ -1034,3 +1037,9 @@ code .nd { color: #9FAD7E; } /* CSS pseudo selector */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+.isotope-item {
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 20px;
+}
