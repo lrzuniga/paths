@@ -48,7 +48,6 @@
       <% levels = r.level_list.join(" ") %> 
       <% rtypes = r.resource_type_list.join(" ") %>
       <div class="unit-level <%= categories %> <%= levels %> <%= rtypes %>">
-        <%#= link_to r.name, r.link, :target => '_blank' %>
         <%= link_to r.name, resource_path(r), :remote => true, :class => "res-link" %>
       </div>
     <% end  %>
