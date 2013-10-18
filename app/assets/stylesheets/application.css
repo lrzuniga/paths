@@ -27,6 +27,12 @@ html {
   text-shadow: 2px 2px 4px #767676;
   background-color: rgba(255,255,255,0.5)
 }
+#title-tag-line{
+  color: white;
+  font-size: 18px;
+  text-indent: 20px;
+  margin-top: 5px;
+}
 .nav-items{
   display: inline;
   text-align: right;
@@ -781,6 +787,7 @@ h3#options {
   font-size: 22px;
   font-weight: 300;
 }
+
 
 /* as-is from MIT */
 
