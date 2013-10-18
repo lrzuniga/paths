@@ -167,6 +167,10 @@ a:visited {
   top:1px;
 }
 
+#logo{
+  width: 9.5%;
+  height: auto;
+}
 #course-title{
   color:white;
   position: relative;#
