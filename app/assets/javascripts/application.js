@@ -26,7 +26,7 @@
     $container.isotope({
       itemSelector: '.unit-level',
       // layoutMode: "fitRows",
-      resizable: false
+      // resizable: false
       masonry: {
         columnWidth: 80
         
