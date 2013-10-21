@@ -620,7 +620,7 @@ body {
 
 /**** Photo demo ****/
 
-.photos .photo {
+/*.photos .photo {
   width: 320px;
   margin: 5px;
   float: left;
@@ -637,7 +637,7 @@ body {
 
 .demos #content {
   height: 100%;
-}
+}*/
 
 /**** Docs ****/
 
