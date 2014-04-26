@@ -17,42 +17,50 @@ html {
   background-size: cover;
   margin-top: 60px;
 }
-#header {
-  position1: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 80px;
-  margin: 0 auto;
-  text-shadow: 2px 2px 4px #767676;
-  background-color: rgba(255,255,255,0.5)
+.menubar {
+  position:relative;
+  float:left;
+  clear:both;
+  z-index:0;
+  width:100%;
+  height:100px;
+  margin-top:-100px;
+  background-color:rgb(255, 255, 255);
+  opacity:0.5;
 }
-#title-tag-line{
+.slogan {
+  float:left;
+  width:38.6666666666%;
+  min-height:42px;
+  margin-left:1.25%;
+  font-size:2em;
+  line-height:1.38;
+  color:rgb(255, 255, 255);
+}
+li {
+  text-align: left;
+  text-decoration: none;
+  font-size: 33px;
+}
+#title-tag-line {
   color: white;
   font-size: 18px;
   font-weight: normal;
   text-indent: 20px;
   margin-top: 5px;
 }
-.nav-items{
+.nav-items {
   display: inline;
   text-align: right;
-
 }
-INPUT#course_title
-{
+INPUT#course_title {
   border:4px solid #456879;
   border-radius:10px;
   height: 22px;
   width: 230px;
   font-size: 44px;
 }
-/*a:link {
-  color: black;}
-a:visited {
-  color: black;}*/
-
-.course-container{
+.course-container {
   text-align: center;
   margin-top: 85px;
 }
@@ -118,10 +126,10 @@ a:visited {
 .resource-form {
   text-align: left;
   color: white;
-  background-color: rgba(255,255,255,0.5)
+  background-color: rgba(255,255,255,0.5);
 }
 #resource-show-container{
-  background-color: rgba(255,255,255,0.5)
+  background-color: rgba(255,255,255,0.5);
 }
 /*#new-resource-form{
   width: 100px;
@@ -177,10 +185,15 @@ a:visited {
   top:1px;
 }
 
-#logo{
-  width: 9.5%;
-  height: auto;
+.logo{
+  display:block;
+  position:relative;
+  float:left;z-index:1;
+  width:139px;
+  height:auto;
+  overflow:hidden;
 }
+
 #course-title{
   color:white;
   position: relative;#

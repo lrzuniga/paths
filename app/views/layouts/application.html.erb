@@ -6,17 +6,12 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="body paths clearfix">
+  <a href="/"><img class="logo" src="/images/logo.png" data-rimage data-src="images/logo.png"></a>
 
-<div id="header">
-    <!-- <h1 id="title">Paths</h1> -->
-    <a href="/"><img src="/images/logo.png" id="logo"></a>
-    <ul class="nav-items">
-      <!-- <li>SignIn</li> -->
-    </ul>
-    
-</div>
-<h2 id="title-tag-line">Your Personal Learning Journey</h2>
+  <div class="menubar"></div>
+  <div class="slogan">Your Personal Learning Journey</div>
+<br>
 <%= yield %>
 
 </body>

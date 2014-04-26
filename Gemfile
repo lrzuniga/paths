@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem "select2-rails"
@@ -48,4 +47,4 @@ end
 # Use debugger
  gem 'debugger', group: [:development, :test]
 
- gem 'sorcery'
+
