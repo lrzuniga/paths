@@ -6,8 +6,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'acts-as-taggable-on'
-gem "select2-rails"
-
+gem 'select2-rails'
+gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
