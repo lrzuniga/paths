@@ -10,6 +10,7 @@
 *
 * v2007.8
 */
+
 html { 
   background-image: url(asset-path('shelf.jpg')) no-repeat center center fixed;
   -webkit-background-size: cover;
