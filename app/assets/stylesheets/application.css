@@ -8,10 +8,10 @@
 * You're free to add application-wide styles to this file and they'll appear at the top of the
 * compiled file, but it's generally better to create a new file per style scope.
 *
-* v2007.2
+* v2007.3
 */
 html { 
-  background-image: url('/assets/shelf.jpg') no-repeat center center fixed;
+  background-image: url('shelf.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -89,7 +89,7 @@ INPUT#course_title {
   height: 5px;
   padding: 12px 10px 12px 12px;
   border: none;
-  font-family: 'Heveltica', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: 100;
   font-size: 19px;
   color: #000;
@@ -197,7 +197,7 @@ INPUT#course_title {
 
 #course-title{
   color:white;
-  position: relative;#
+  position: relative;
   margin-top: 120px;
   text-align: right;
   font-size: 50px;
